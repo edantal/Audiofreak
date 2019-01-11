@@ -1,0 +1,45 @@
+.row {
+  @include clearfix;
+
+  &--gutters {
+    margin-right: -5rem;
+  }
+
+  &--gutters > div {
+    padding-right: 5rem;
+  }
+
+  &__2 {
+    float: left;
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  @include respond(medium) {
+    &--gutters {
+      margin-right: -4rem;
+    }
+  
+    &--gutters > div {
+      padding-right: 4rem;
+    }
+
+    &__2 {
+      width: 25%;
+    }
+  }
+
+  @include respond(large) {
+    &--gutters {
+      margin-right: -4rem;
+    }
+  
+    &--gutters > div {
+      padding-right: 4rem;
+    }
+
+    &__2 {
+      width: 20%;
+    }
+  }
+}

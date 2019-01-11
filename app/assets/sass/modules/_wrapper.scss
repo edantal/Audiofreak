@@ -1,0 +1,20 @@
+.wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  overflow: hidden;
+
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0; 
+  }
+  
+  &--narrow {
+    max-width: 50rem;
+
+    @include respond(medium) {
+      max-width: 120rem;
+    }
+  }
+}

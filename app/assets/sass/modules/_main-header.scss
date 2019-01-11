@@ -1,0 +1,14 @@
+.main-header {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+
+  &__logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 4rem 0 3rem;
+    background: $gradient-1;
+    text-align: center;
+  }
+}

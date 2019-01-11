@@ -1,0 +1,11 @@
+.section {
+  padding: 4.5rem 0;
+
+  &--white {
+    background-color: $white;
+  }
+
+  &--light-grey {
+    background-color: $grey-1;
+  }
+}

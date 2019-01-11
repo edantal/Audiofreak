@@ -1,0 +1,62 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == small {
+    @media only screen and (min-width: 530px) { @content };
+  }
+  @if $breakpoint == medium {
+    @media only screen and (min-width: 800px) { @content };
+  }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 1200px) { @content };
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+@mixin keyframes($anim) {
+  @-webkit-keyframes #{$anim} {
+    @content;
+  }
+  @-moz-keyframes #{$anim} {
+    @content;
+  }
+  @-ms-keyframes #{$anim} {
+    @content;
+  }
+  @-o-keyframes #{$anim} {
+    @content;
+  }
+  @keyframes #{$anim} {
+    @content;
+  }
+}
